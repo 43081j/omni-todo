@@ -1,12 +1,14 @@
 {
   "compilerOptions": {
-    "outDir": "./lib",
-    "rootDir": "./src",
+    "noEmit": true,
     "module": "node18",
+    "moduleResolution": "node16",
     "target": "esnext",
-    "types": ["node"],
+    "lib": ["esnext", "dom", "dom.iterable"],
+    "types": ["node", "vite/client"],
+    "jsx": "react-jsx",
     "sourceMap": false,
-    "declaration": true,
+    "declaration": false,
     "declarationMap": false,
     "noUncheckedIndexedAccess": true,
     "exactOptionalPropertyTypes": true,
@@ -20,5 +22,5 @@
     "erasableSyntaxOnly": true,
     "skipLibCheck": true
   },
-  "include": ["src"]
+  "include": ["src", "vite.config.ts"]
 }

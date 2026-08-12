@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>omni-todo</title>
+    <meta
+      name="description"
+      content="A todo list built with too many web frameworks."
+    />
+    <meta
+      name="og:title"
+      content="omni-todo: A todo list built with too many web frameworks."
+    />
+    <meta name="og:type" content="website" />
+    <meta name="og:description" content="A todo list built with too many web frameworks." />
+    <style>
+      :root {
+        --page-background: #eef1f6;
+        --page-color: #1a1a1a;
+        --omni-todo-background: #fff;
+        color-scheme: light dark;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --page-background: #16181d;
+          --page-color: #f2f2f2;
+          --omni-todo-background: #22252c;
+          --omni-todo-color: #f2f2f2;
+        }
+      }
+
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+        min-height: 100vh;
+        margin: 0;
+        padding: 3rem 1rem;
+        box-sizing: border-box;
+        background-color: var(--page-background);
+        color: var(--page-color);
+        font-family: system-ui, sans-serif;
+      }
+
+      .intro {
+        max-width: 32rem;
+        text-align: center;
+      }
+
+      .intro h1 {
+        margin: 0;
+        font-size: 1.5rem;
+      }
+
+      omni-todo {
+        width: 100%;
+        max-width: 32rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="intro">
+      <h1>omni-todo</h1>
+    </div>
+
+    <omni-todo heading="Things to do"></omni-todo>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
