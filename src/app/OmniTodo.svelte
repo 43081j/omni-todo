@@ -115,6 +115,7 @@
 <style>
   .app {
     display: block;
+    container-type: inline-size;
     padding: 1.25rem;
     border-radius: 0.75rem;
     background-color: var(--omni-todo-background, #fff);
@@ -151,6 +152,14 @@
     align-items: baseline;
     justify-content: space-between;
     gap: 1rem;
+  }
+
+  @container (max-width: 20rem) {
+    header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.15rem;
+    }
   }
 
   h1 {
