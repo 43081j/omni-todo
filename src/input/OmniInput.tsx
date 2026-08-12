@@ -16,6 +16,7 @@ styleSheet.replaceSync(`
   :host {
     display: flex;
     flex: 1;
+    min-width: 0;
     position: relative;
     padding: 0.4rem 0.35rem 0.25rem;
     border: 1px dashed color-mix(in srgb, currentColor 22%, transparent);
