@@ -45,9 +45,11 @@ export default defineConfig({
     environment: 'node',
     browser: {
       enabled: true,
-      provider: playwright(),
       headless: true,
-      instances: [{browser: 'chromium'}]
+      provider: playwright(
+        process.env.CI ? { launchOptions: { channel: 'chrome' } } : {},
+      ),
+      instances: [{ browser: 'chromium' }],
     },
     coverage: {
       provider: 'v8'
